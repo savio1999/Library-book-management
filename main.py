@@ -193,18 +193,21 @@ def main():
                             "checkin":check_management.checkin_list,
                             }
 
-            save_data(os.path.join("data", "save_all_data.json"),save_all_data)
+            save_data(os.path.join("save_all_data.json"),save_all_data)
             print("Saved Library data.") 
 
         elif choice == '6':
+            if os.path.isfile("save_all_data.json"):
 
-            json_data = retrive_data(os.path.join("data", "save_all_data.json"))
-            user_management.users = json_data["users"]
-            book_management.books = json_data["books"]
-            check_management.checkout_list = json_data["checkout"]
-            check_management.checkin_list = json_data["checkin"]
+                json_data = retrive_data(os.path.join("save_all_data.json"))
+                user_management.users = json_data["users"]
+                book_management.books = json_data["books"]
+                check_management.checkout_list = json_data["checkout"]
+                check_management.checkin_list = json_data["checkin"]
 
-            print("retrived  Library data.") 
+                print("retrived  Library data.") 
+            else:
+                print("No data found")
 
         elif choice == '7':
             break
