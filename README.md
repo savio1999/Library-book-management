@@ -1,6 +1,6 @@
   # Library-book-management
 
-1 - Run main.py to get interactive session
+1 - Run main.py to get interactive session. <br>
 2 - To add,delete,update,list books go to manage books
 3 - To add,delete,update,list users go to manage users
 4 - After adding books data and user data to save the data select save data in main menu
